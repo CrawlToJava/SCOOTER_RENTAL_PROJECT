@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <changeSet id="2023-02-27-1925" author="igor.vashkevich">
+        <createTable tableName="scooters">
+            <column name="id" type="BIGINT" autoIncrement="true">
+                <constraints nullable="false" unique="true" primaryKey="true"/>
+            </column>
+            <column name="uuid_d" type="UUID">
+                <constraints nullable="false" unique="true"/>
+            </column>
+            <column name="model_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="rental_point_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="scooter_status" type="VARCHAR(60)">
+                <constraints nullable="false" unique="false"/>
+            </column>
+            <column name="scooter_price" type="VARCHAR(60)">
+                <constraints nullable="false" unique="false"/>
+            </column>
+        </createTable>
+        <addForeignKeyConstraint baseTableName="scooters"
+                                 baseColumnNames="model_id"
+                                 constraintName="model_fk"
+                                 referencedTableName="models"
+                                 referencedColumnNames="id"/>
+
+        <addForeignKeyConstraint baseTableName="scooters"
+                                 baseColumnNames="rental_point_id"
+                                 constraintName="rental_point_fk"
+                                 referencedTableName="rental_points"
+                                 referencedColumnNames="id"/>
+    </changeSet>
+</databaseChangeLog>
