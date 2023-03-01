@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <changeSet id="2023-02-26-1937" author="igor.vashkevich">
+        <createTable tableName="orders_users">
+            <column name="order_uuid" type="UUID"/>
+            <column name="user_uuid" type="UUID"/>
+        </createTable>
+
+        <addForeignKeyConstraint baseTableName="orders_users" baseColumnNames="user_uuid"
+                                 constraintName="user_fk"
+                                 referencedTableName="users"
+                                 referencedColumnNames="uuid_d"/>
+
+        <addForeignKeyConstraint baseTableName="orders_users" baseColumnNames="order_uuid"
+                                 constraintName="order_fk"
+                                 referencedTableName="orders"
+                                 referencedColumnNames="uuid_d"/>
+    </changeSet>
+</databaseChangeLog>
