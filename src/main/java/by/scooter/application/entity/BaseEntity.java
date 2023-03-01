@@ -1,5 +1,7 @@
 package by.scooter.application.entity;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Id;
 import jakarta.persistence.MappedSuperclass;
 import lombok.Getter;
 import lombok.Setter;
@@ -11,8 +13,11 @@ import java.util.UUID;
 @Getter
 @Setter
 public class BaseEntity {
+    @Id
+    @Column(name = "id")
     private Long id;
 
+    @Column(name = "uuid_d")
     private UUID uuid = UUID.randomUUID();
 
     @Override

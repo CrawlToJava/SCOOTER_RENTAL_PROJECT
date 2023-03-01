@@ -20,9 +20,6 @@
             <column name="last_name" type="VARCHAR(60)">
                 <constraints nullable="false" unique="false"/>
             </column>
-            <column name="last_name" type="VARCHAR(60)">
-                <constraints nullable="false" unique="false"/>
-            </column>
             <column name="user_status" type="VARCHAR(50)">
                 <constraints nullable="false" unique="false"/>
             </column>
