@@ -23,7 +23,7 @@
             <column name="scooter_status" type="VARCHAR(60)">
                 <constraints nullable="false" unique="false"/>
             </column>
-            <column name="scooter_price" type="VARCHAR(60)">
+            <column name="scooter_price" type="NUMERIC">
                 <constraints nullable="false" unique="false"/>
             </column>
         </createTable>

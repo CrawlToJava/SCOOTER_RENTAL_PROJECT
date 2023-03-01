@@ -1,13 +1,13 @@
 databaseChangeLog:
   - include:
+      file: db/changelog/2023-02/create-users-table.xml
+  - include:
       file: db/changelog/2023-02/create-models-table.xml
-  - include:
-      file: db/changelog/2023-02/create-orders-table.xml
-  - include:
-      file: db/changelog/2023-02/create-orders-users-table.xml
   - include:
       file: db/changelog/2023-02/create-rental-points-table.xml
   - include:
       file: db/changelog/2023-02/create-scooters-table.xml
   - include:
-      file: db/changelog/2023-02/create-users-table.xml
+      file: db/changelog/2023-02/create-orders-table.xml
+  - include:
+      file: db/changelog/2023-02/create-orders-users-table.xml
