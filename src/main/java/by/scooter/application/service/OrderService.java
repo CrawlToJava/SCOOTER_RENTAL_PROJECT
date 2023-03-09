@@ -12,7 +12,7 @@ public interface OrderService {
 
     void delete(UUID uuid);
 
-    void startOrder(UUID userUUID, UUID scooterUUID);
+    void startRent(UUID userUUID, UUID scooterUUID);
 
-    void finishOrder(UUID scooterUUID, UUID orderUUID);
+    void finishRent(UUID scooterUUID, UUID orderUUID);
 }
