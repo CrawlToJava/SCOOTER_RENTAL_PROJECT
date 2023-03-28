@@ -52,12 +52,12 @@ public class OrderServiceImpl implements OrderService {
     }
 
     @Override
-    public void startOrder(UUID userUUID, UUID scooterUUID) {
+    public void startRent(UUID userUUID, UUID scooterUUID) {
 
     }
 
     @Override
-    public void finishOrder(UUID scooterUUID, UUID orderUUID) {
+    public void finishRent(UUID scooterUUID, UUID orderUUID) {
 
     }
 

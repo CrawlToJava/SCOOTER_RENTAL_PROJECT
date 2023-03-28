@@ -1,4 +1,4 @@
-package by.scooter.application.service.dto.scooter;
+package by.scooter.application.controller.dto.v1.scooter;
 
 import by.scooter.application.entity.ScooterStatus;
 import jakarta.persistence.EnumType;
@@ -10,7 +10,7 @@ import java.math.BigDecimal;
 import java.util.UUID;
 
 @Data
-public class ScooterResponseDto {
+public class V1ScooterResponseDto {
     private UUID uuid;
 
     private UUID modelUUID;
